@@ -9,7 +9,10 @@ const root = createRoot(container);
 
 root.render(
 	<React.StrictMode>
+		{/* Оборачиваем приложения в провайдер, который делает
+		хранилище redux доступным для вложенных компонентов */}
 		<Provider store={store}>
+
 			<App />
 		</Provider>
 	</React.StrictMode>

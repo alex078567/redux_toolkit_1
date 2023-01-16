@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { clearCart } from "../features/cart/cartSlice";
 import { openModal } from "../features/modal/modalSlice";
 const CartContainer = () => {
+	//хук useDispatch позволяет использовать функции редюсера для
+	//управления состоянием state
 	const dispatch = useDispatch();
 	const { cartItems, total, amount } = useSelector((state) => state.cart);
 	if (amount < 1) {
